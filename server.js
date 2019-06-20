@@ -13,7 +13,7 @@ cloudinary.config({
 
 server.post('/upload', (req, res) => {
   // Upload image
-    cloudinary.v2.uploader.upload(req.body.img, function(
+    cloudinary.v2.uploader.upload(`data:image/jpg;base64${req.body.image}`, function(
     error,
     result
     ) {
