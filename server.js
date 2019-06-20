@@ -14,7 +14,7 @@ cloudinary.config({
 
 server.post('/upload', (req, res) => {
   // Upload image, Needs to be in base 64 format
-    cloudinary.v2.uploader.upload(`data:image/jpg;base64${req.body.image}`, function(
+    cloudinary.v2.uploader.upload(`data:image/jpg;base64,${req.body.image}`, function(
     error,
     result
     ) {
